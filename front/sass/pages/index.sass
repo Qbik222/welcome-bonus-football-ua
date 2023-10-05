@@ -1,6 +1,7 @@
 $blue: #000055
 $magenta: #ff267e
 $green: #05C489
+$green-hover: #09B47F
 $grey: #ededed
 $white: #ffffff
 $pink: #FFDFEC
@@ -46,15 +47,6 @@ body
 body.light
   .wrapper
     background: $blue
-  .bonus
-    background: url("../img/bg-desc-one-light.jpg") no-repeat 50% 0/cover
-    @media screen and (max-width: 1040px)
-      background: url("../img/bg-tab-one-light.jpg") no-repeat 50% 0/cover
-    @media screen and (max-width: 600px)
-      background: url("../img/bg-mob-one-light.jpg") no-repeat 50% -10px/cover
-      &__container
-        &::after
-          background: linear-gradient(180deg, rgba(0, 0, 85, 0.00) 0%, #005 83.21%)
   .info
     &__item
       background: #00003D
@@ -84,15 +76,6 @@ body.light
 body.dark
   .wrapper
     background: #191A23
-  .bonus
-    background: url("../img/bg-desc-one-dark.jpg") no-repeat 50% 0/cover
-    @media screen and (max-width: 1040px)
-      background: url("../img/bg-tab-one-dark.jpg") no-repeat 50% 0/cover
-    @media screen and (max-width: 600px)
-      background: url("../img/bg-mob-one-dark.jpg") no-repeat 50% -25px/cover
-      &__container
-        &::after
-          background: linear-gradient(0deg, #12131C 0%, rgba(18, 19, 28, 0.74) 49.48%, rgba(18, 19, 28, 0.00) 100%)
   .info
     &__item
       background: #292B35
@@ -120,77 +103,174 @@ body.dark
 
 
 
-.bonus
-  padding: 68px 0 85px 0
+body
+  &.light
+    .banner
+      background: $blue
+      &__image
+        background: url("../img/pers-desc.jpg") no-repeat 0 0/contain
+        @media screen and (max-width: 600px)
+          background: url("../img/pers-mob.jpg") no-repeat 0 0/contain
+      &__info
+        &-bottom
+          color: $blue
+        &-link
+          color: $blue
+        &-top
+          @media screen and (max-width: 600px)
+            color: $blue
+
+  &.dark
+    .banner
+      background: #12131C
+      &__image
+        background: url("../img/pers-desc-dark.jpg") no-repeat 0 0/contain
+        @media screen and (max-width: 600px)
+          background: url("../img/pers-mob.jpg") no-repeat 0 0/contain
+      &__info
+        &-bottom
+          color: #12131C
+          &::before
+            filter: grayscale(1) brightness(3)
+        &-link
+          color: #12131C
+        &-top
+          @media screen and (max-width: 600px)
+            color: #12131C
+
+@media screen and (max-width: 600px)
+  body
+    &.light
+      .banner
+        &__image
+          &::before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 130px
+            bottom: 20px
+            left: 0
+            z-index: 4
+            background: linear-gradient(180deg, rgba(0, 0, 85, 0) 0%, #000055 65.91%)
+    &.dark
+      .banner
+        &__image
+          &::before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 130px
+            bottom: 20px
+            left: 0
+            z-index: 4
+            background: linear-gradient(180deg, rgba(0, 0, 85, 0) 0%, #12131C 65.91%)
+
+
+@media screen and (max-width: 450px)
+  body
+    &.light
+      .banner
+        &__image
+          &::before
+            height: 90px
+    &.dark
+      .banner
+        &__image
+          &::before
+            height: 90px
+
+.banner
+  overflow: hidden
+  padding: 166px 0 40px 0
   position: relative
+
   &__container
+    max-width: 1330px
+    padding: 0 60px
+    margin: 0 auto
     display: flex
     align-items: center
-    justify-content: flex-start
     position: relative
-  &__text
+    justify-content: space-between
+  &__image
+    position: absolute
+    bottom: -20px
+    right: -180px
+    width: 998px
+    height: 500px
+    z-index: 0
+
+  &__info
     position: relative
-    z-index: 5
+    z-index: 3
+    top: -40px
     display: flex
     flex-direction: column
-    align-items: flex-start
-    padding-left: 80px
-    &-promotion
+    &-promo
+      align-self: flex-start
+      padding: 6px 13px 4px
       font-family: $font-suisse-med
-      padding: 7px 17px 5px
+      font-size: 16px
+      line-height: 22px
+      letter-spacing: 0.01em
       text-transform: uppercase
-      background: $magenta
-      border-radius: 1000px
-      font-size: 22px
-      line-height: 29px
-      color: $blue
+      color: #000055
+      background: #FF267E
+      border-radius: 76.5px
+      display: inline-block
       margin: 0 0 15px 0
-    &-welcom
+    &-top
       font-family: $font-suisse-med
-      text-transform: uppercase
       font-size: 38px
-      line-height: 38px
-      color: $grey
-      margin: 0
-    &-bonus
-      font-family: $font-suisse-med
+      line-height: 40px
+      letter-spacing: 0.01em
       text-transform: uppercase
-      font-size: 78px
-      line-height: 96px
-      color: $grey
-      margin: 0 0 15px 0
+      color: #EDEDED
+      margin: 0 0 9px 0
+    &-center
+      white-space: nowrap
+      font-family: $font-suisse-med
+      font-size: 73px
+      line-height: 69px
+      letter-spacing: 0.01em
+      text-transform: uppercase
+      color: #FFFFFF
+      margin: 0 0 29px 0
       span
-        margin-right: -10px
-        font-family: $font-suisse-med
+        white-space: nowrap
+        display: inline-block
+        margin: 0 -5px 0 0
         font-size: 37px
-        line-height: 40px
-        letter-spacing: 0.37px
-        text-transform: uppercase
-    &-spin
-      font-family: $font-suisse-med
-      padding: 6px 23px 4px
-      background: $magenta
-      text-transform: uppercase
-      font-size: 42px
-      line-height: 54px
-      color: $blue
+        line-height: 29px
+        font-family: $font-suisse-med
+    &-bottom
+      align-self: flex-start
+      display: inline-block
       position: relative
-      margin: 0 0 40px 0
+      background: #FF267E
+      padding: 6px 24px 5px
+      font-family: $font-suisse-med
+      font-size: 42px
+      line-height: 52px
+      letter-spacing: 0.01em
+      text-transform: uppercase
+      margin: 0 0 70px 0
       &::before
         content: ''
         position: absolute
+        top: -17px
+        left: -17px
         width: 42px
         height: 36px
-        background: url('../img/plus.svg') no-repeat 0% 0%/contain
-        top: -16px
-        left: -18px
+        background: url("../img/plus.svg") no-repeat 0 0/contain
     &-sub
+      display: list-item
+      list-style-type: none
       font-family: $font-suisse-med
-      max-width: 420px
+      max-width: 650px
       font-size: 10px
       line-height: 17px
       letter-spacing: 0.1px
-      text-transform: uppercase
       color: rgba(255, 255, 255, 0.80)
       a
         font-family: $font-suisse-med
@@ -198,11 +278,9 @@ body.dark
         color: rgba(255, 255, 255, 0.80)
         &:hover
           text-decoration: none
-  &__image
-    max-width: 500px
-    position: absolute
-    bottom: -70px
-    left: 580px
+
+
+
 
 .info
   margin-top: -65px
@@ -231,7 +309,7 @@ body.dark
     &-text
       flex: 1 1 auto
       font-family: $font-suisse-reg
-      max-width: 370px
+      //max-width: 370px
       font-size: 18px
       line-height: 28px
       letter-spacing: 0.02em

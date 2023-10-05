@@ -1,3 +1,159 @@
+//BANNER
+@media screen and (max-width: 1110px)
+  .banner
+    padding: 67px 0 20px 0
+    &__container
+      padding: 0 25px
+    &__info
+      transform-origin: left center
+      transform: scale(.8)
+    &__image
+      bottom: -20px
+      right: -400px
+      width: 1058px
+      height: 410px
+
+@media screen and (max-width: 975px)
+  .banner
+    padding: 67px 0 0px 0
+    margin-bottom: -50px
+
+@media screen and (max-width: 870px)
+  .banner
+    margin-bottom: 0px
+    padding: 0
+    &__info
+      transform: scale(.65)
+      top: 13px
+    &__image
+      bottom: -10px
+      right: -380px
+      width: 908px
+      height: 325px
+
+
+
+@media screen and (max-width: 750px)
+  .banner
+    margin: -81px 0 10px 0
+    &__image
+      bottom: -10px
+      width: 808px
+      height: 250px
+    &__info
+      top: 53px
+      transform: scale(.5)
+      bottom: - 20px
+
+
+
+@media screen and (max-width: 600px)
+  .banner
+    margin: 0
+    padding: 34px 0 110px 0
+    &__container
+      flex-direction: column-reverse
+      align-items: center
+      position: static
+      padding: 0
+    &__image
+      width: 100%
+      min-width: 100%
+      height: 88vw
+      position: relative
+      bottom: 0
+      right: auto
+      z-index: 2
+
+    &__info
+      top: 0
+      margin: 0
+      position: absolute
+      left: 50%
+      transform: translateX(-50%) scale(1)
+      z-index: 4
+      align-items: center
+      width: 100%
+      min-height: 100%
+      bottom: 0
+      padding-bottom: 15px
+      &-sub
+        padding: 0 15px
+        text-align: center
+        br
+          display: none
+      &-top
+        position: absolute
+        top: 0
+        left: 0
+        padding: 4px 10px 3px
+        background: #FF267E
+        flex: 1 1 auto
+        text-align: center
+        width: 100%
+        font-size: 26px
+        line-height: 34px
+      &-promo
+        font-size: 16px
+        line-height: 22px
+        padding: 4px 9px 3px
+        position: absolute
+        top: 60px
+        right: 20px
+      &-center
+        font-size: 70px
+        line-height: 74px
+        margin: auto 0 20px 0
+        span
+          font-size: 24px
+          line-height: 29px
+          margin: 0 -9px 0 0
+      &-bottom
+        align-self: center
+        padding: 6px 19.5px 5px
+        font-size: 37px
+        line-height: 41px
+        margin: 0 0 20px 0
+        &::before
+          width: 38.4px
+          height: 33.8px
+      &-link
+        margin: 0 0 20px 0
+        padding: 15px 30px 13px
+        font-size: 17px
+        line-height: 26px
+      &-info
+        font-size: 8px
+        line-height: 16px
+
+
+@media screen and (max-width: 450px)
+  .banner
+    padding: 34px 0 170px 0
+
+
+@media screen and (max-width: 365px)
+  .banner
+    padding: 34px 0 140px 0
+    &__info
+      &-sub
+        font-size: 8px
+        line-height: 15px
+      &-center
+        font-size: 60px
+        line-height: 69px
+        margin: auto 0 14px 0
+      &-bottom
+        font-size: 31px
+        line-height: 38px
+        &::before
+          top: -13px
+          left: -13px
+          width: 33.4px
+          height: 28.8px
+
+
+
 @media screen and (max-width: 1270px)
   .info
     margin-bottom: 130px
@@ -22,70 +178,13 @@
         line-height: 40px
         margin: 0 0 20px 0
 
-@media screen and (max-width: 1180px)
-  .bonus
-    &__text
-      padding-left: 30px
-    &__image
-      left: 500px
-
-@media screen and (max-width: 1040px)
-  .bonus
-    &__image
-      max-width: 395px
-      min-width: 395px
-      bottom: -40px
-      left: auto
-      right: 60px
-    &__container
-      &::before
-        bottom: -182px
-    &__text
-      &-promotion
-        padding: 5px 13px 2px
-        font-size: 18px
-        line-height: 23px
-        margin: 0 0 14px 0
-      &-welcom
-        font-size: 30px
-        line-height: 30px
-        margin: 0 0 10px 0
-      &-bonus
-        font-size: 62px
-        line-height: 62px
-        margin: 0 0 13px 0
-        span
-          font-size: 28px
-          line-height: 30px
-      &-spin
-        padding: 5px 17px 3px
-        font-size: 33px
-        line-height: 43px
-        margin: 0 0 30px 0
-        &::before
-          width: 33px
-          height: 28px
-          top: -13px
-          left: -15px
-      &-sub
-        max-width: 330px
-        font-size: 8px
-        line-height: 16px
 
 
 @media screen and (max-width: 975px)
   .info
     margin-top: -25px
     margin-bottom: 50px
-  .bonus
-    padding: 65px 0 45px 0
-    &__container
-      &::before
-        bottom: -142px
-    &__image
-      right: 60px
-    &__text
-      padding-left: 60px
+
   .new
     padding: 45px 0 90px 0
     &__info
@@ -98,14 +197,6 @@
         bottom: -95px
         right: -100px
 
-@media screen and (max-width: 880px)
-  .bonus
-    padding: 65px 0 45px 0
-    &__image
-      max-width: 368px
-      right: 15px
-    &__text
-      padding-left: 15px
 
 @media screen and (max-width: 765px)
 
@@ -120,15 +211,6 @@
       padding: 40px
 
 @media screen and (max-width: 745px)
-  .bonus
-    padding: 35px 0 45px 0
-    &__text
-      transform-origin: left center
-      transform: scale(0.9)
-    &__image
-      right: 15px
-      min-width: 345px
-      max-width: 345px
   .info
     margin-bottom: 23px
     &__list
@@ -177,17 +259,6 @@
         width: 100%
         text-align: center
 
-@media screen and (max-width: 670px)
-  .bonus
-    &__text
-      transform: scale(0.8)
-
-@media screen and (max-width: 640px)
-  .bonus
-    &__image
-      right: -15px
-    &__text
-      transform: scale(0.75)
 
 @media screen and (max-width: 600px)
   .info
@@ -199,76 +270,6 @@
       &-title
         font-size: 35px
         line-height: 40px
-  .bonus
-    padding: 0
-    &__container
-      justify-content: stretch
-      padding: 0
-      &::after
-        content: ''
-        position: absolute
-        bottom: -20px
-        width: 600px
-        left: 0
-        right: auto
-        height: 320px
-    &__text
-      padding: 0
-      width: 100%
-      transform: scale(1)
-      align-items: stretch
-      &-welcom
-        order: 1
-        font-size: 33px
-        line-height: 43px
-        padding: 5px 15px 3px
-        background: $magenta
-        color: $blue
-        text-align: center
-        margin: 0 0 20px 0
-      &-promotion
-        order: 2
-        align-self: flex-end
-        margin: 0 20px 68% 0
-        font-size: 20px
-        line-height: 26px
-        padding: 5px 13px 3px
-      &-bonus
-        order: 3
-        align-self: center
-        font-size: 78px
-        line-height: 87px
-        margin: 0 0 15px 0
-        span
-          font-size: 23px
-          margin-right: -17px
-      &-spin
-        order: 4
-        align-self: center
-        font-size: 40px
-        line-height: 52px
-        margin: 0 0 20px 0
-        &::before
-          width: 44px
-          height: 38px
-          top: -21px
-          left: -19px
-      &-sub
-        width: 100%
-        max-width: 100%
-        order: 5
-        padding: 0 15px
-        text-align: center
-        font-size: 8px
-        line-height: 16px
-        letter-spacing: 0.08px
-    &__image
-      top: 100px
-      max-width: 80%
-      width: 100%
-      right: auto
-      left: 0
-      min-width: auto
   .rules
     padding: 0 0 50px 0
     &__summary
@@ -291,29 +292,6 @@
 
 
 @media screen and (max-width: 370px)
-  .bonus
-    &__text
-      &-welcom
-        font-size: 27px
-        line-height: 36px
-      &-bonus
-        font-size: 66px
-        line-height: 84px
-        margin: 0 0 8px 0
-        span
-          font-size: 18px
-      &-spin
-        font-size: 32px
-        line-height: 45px
-        &::before
-          width: 37px
-          height: 33px
-          top: -16px
-          left: -13px
-      &-promotion
-        margin: 0 15px 71% 0
-        font-size: 18px
-        line-height: 23px
 
   .info
     &__item
