@@ -1,0 +1,376 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$grey: #ededed
+$white: #ffffff
+$pink: #FFDFEC
+$grey-footer: #A6A6BE
+
+$btn-white-hover-bg: #337
+$btn-green-hover-bg: #37d0a1
+
+
+$font-suisse-reg: 'SuisseIntl-Regular', sans-serif // 400 //
+$font-suisse-med: 'SuisseIntl-Medium', sans-serif // 500 //
+$font-suisse-semb: 'SuisseIntl-SemiBold', sans-serif // 600 //
+
+
+
+@mixin breakpoint($bp)
+  @media screen and (max-width: $bp)
+    @content
+
+[class*="__container"]
+  max-width: 1260px
+  margin: 0 auto
+  padding: 0 15px
+
+details summary::-webkit-details-marker
+  display: none
+
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+
+  img
+    max-width: 100%
+    height: auto
+  &.overflow
+    overflow: hidden
+
+.wrapper
+  overflow: hidden
+  min-height: 100%
+
+body.light
+  .wrapper
+    background: $blue
+  .bonus
+    background: url("../img/bg-desc-one-light.jpg") no-repeat 50% 0/cover
+    @media screen and (max-width: 1040px)
+      background: url("../img/bg-tab-one-light.jpg") no-repeat 50% 0/cover
+    @media screen and (max-width: 600px)
+      background: url("../img/bg-mob-one-light.jpg") no-repeat 50% -10px/cover
+      &__container
+        &::after
+          background: linear-gradient(180deg, rgba(0, 0, 85, 0.00) 0%, #005 83.21%)
+  .info
+    &__item
+      background: #00003D
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+  .new
+    background: url("../img/bg-desc-two-light.jpg") no-repeat 50% 0/cover
+    @media screen and (max-width: 1040px)
+      background: url("../img/bg-tab-two-light.jpg") no-repeat 50% 0/cover
+    @media screen and (max-width: 700px)
+      background: none
+    &__image
+      @media screen and (max-width: 700px)
+        background: url("../img/bg-mob-two-light.jpg") no-repeat 50% 0/cover
+    .phone
+      background: url("../img/phone-desc-light.png") no-repeat 50% 0/contain
+      @media screen and (max-width: 1040px)
+        background: url("../img/phone-desc-light.png") no-repeat 50% 0/contain
+      @media screen and (max-width: 700px)
+        background: url("../img/phone-mob-light.png") no-repeat 50% 0/contain
+  .rules
+    &__summary
+      background: #00003D
+    &__text
+      background: #00003D
+
+
+body.dark
+  .wrapper
+    background: #191A23
+  .bonus
+    background: url("../img/bg-desc-one-dark.jpg") no-repeat 50% 0/cover
+    @media screen and (max-width: 1040px)
+      background: url("../img/bg-tab-one-dark.jpg") no-repeat 50% 0/cover
+    @media screen and (max-width: 600px)
+      background: url("../img/bg-mob-one-dark.jpg") no-repeat 50% -25px/cover
+      &__container
+        &::after
+          background: linear-gradient(0deg, #12131C 0%, rgba(18, 19, 28, 0.74) 49.48%, rgba(18, 19, 28, 0.00) 100%)
+  .info
+    &__item
+      background: #292B35
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+  .new
+    background: url("../img/bg-desc-two-dark.jpg") no-repeat 50% 0/cover
+    @media screen and (max-width: 1040px)
+      background: url("../img/bg-tab-two-dark.jpg") no-repeat 50% 0/cover
+    @media screen and (max-width: 700px)
+      background: none
+    &__image
+      @media screen and (max-width: 700px)
+        background: url("../img/bg-mob-two-dark.jpg") no-repeat 50% 0/cover
+    .phone
+      background: url("../img/phone-desc-dark.png") no-repeat 50% 0/contain
+      @media screen and (max-width: 1040px)
+        background: url("../img/phone-desc-dark.png") no-repeat 50% 0/contain
+      @media screen and (max-width: 700px)
+        background: url("../img/phone-mob-dark.png") no-repeat 50% 0/contain
+  .rules
+    &__summary
+      background: #292B35
+    &__text
+      background: #292B35
+
+
+
+.bonus
+  padding: 68px 0 85px 0
+  position: relative
+  &__container
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    position: relative
+  &__text
+    position: relative
+    z-index: 5
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    padding-left: 80px
+    &-promotion
+      font-family: $font-suisse-med
+      padding: 7px 17px 5px
+      text-transform: uppercase
+      background: $magenta
+      border-radius: 1000px
+      font-size: 22px
+      line-height: 29px
+      color: $blue
+      margin: 0 0 15px 0
+    &-welcom
+      font-family: $font-suisse-med
+      text-transform: uppercase
+      font-size: 38px
+      line-height: 38px
+      color: $grey
+      margin: 0
+    &-bonus
+      font-family: $font-suisse-med
+      text-transform: uppercase
+      font-size: 78px
+      line-height: 96px
+      color: $grey
+      margin: 0 0 15px 0
+      span
+        margin-right: -10px
+        font-family: $font-suisse-med
+        font-size: 37px
+        line-height: 40px
+        letter-spacing: 0.37px
+        text-transform: uppercase
+    &-spin
+      font-family: $font-suisse-med
+      padding: 6px 23px 4px
+      background: $magenta
+      text-transform: uppercase
+      font-size: 42px
+      line-height: 54px
+      color: $blue
+      position: relative
+      margin: 0 0 40px 0
+      &::before
+        content: ''
+        position: absolute
+        width: 42px
+        height: 36px
+        background: url('../img/plus.svg') no-repeat 0% 0%/contain
+        top: -16px
+        left: -18px
+    &-sub
+      font-family: $font-suisse-med
+      max-width: 420px
+      font-size: 10px
+      line-height: 17px
+      letter-spacing: 0.1px
+      text-transform: uppercase
+      color: rgba(255, 255, 255, 0.80)
+      a
+        font-family: $font-suisse-med
+        text-decoration: underline
+        color: rgba(255, 255, 255, 0.80)
+        &:hover
+          text-decoration: none
+  &__image
+    max-width: 500px
+    position: absolute
+    bottom: -70px
+    left: 580px
+
+.info
+  margin-top: -65px
+  margin-bottom: 135px
+  position: relative
+  z-index: 3
+  &__container
+    max-width: 1270px
+    margin: 0 auto
+    padding: 0 20px
+  &__list
+    display: grid
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px)
+    gap: 30px
+  &__item
+    display: flex
+    flex-direction: column
+    padding: 60px 50px 50px 50px
+    &-title
+      font-family: $font-suisse-med
+      text-transform: uppercase
+      font-size: 47px
+      line-height: 40px
+      color: $grey
+      margin: 0 0 25px 0
+    &-text
+      flex: 1 1 auto
+      font-family: $font-suisse-reg
+      max-width: 370px
+      font-size: 18px
+      line-height: 28px
+      letter-spacing: 0.02em
+      color: $grey
+      margin: 0 0 40px 0
+    &-link
+      align-self: flex-start
+      font-family: $font-suisse-semb
+      display: inline-block
+      letter-spacing: 0.08em
+      text-transform: uppercase
+      font-size: 20px
+      line-height: 26px
+      color: $blue
+      padding: 18px 33px 16px
+      background: $green
+      border-radius: 4px
+      transition: background-color .3s ease
+      &:hover
+        background: $btn-green-hover-bg
+
+.new
+  padding: 70px 0
+  margin-bottom: 100px
+
+
+  &__container
+    position: relative
+    max-width: 1305px
+    margin: 0 auto
+    padding: 0 15px 0 60px
+  &__row
+    display: flex
+  &__image
+    .phone
+      width: 741px
+      height: 573px
+      position: absolute
+      bottom: -75px
+      right: -70px
+  &__info
+    max-width: 485px
+    &-title
+      font-family: $font-suisse-semb
+      font-size: 47px
+      line-height: 61px
+      text-transform: uppercase
+      color: $grey
+      margin: 0 0 20px 0
+    &-text
+      font-family: $font-suisse-reg
+      font-size: 18px
+      line-height: 28px
+      letter-spacing: 0.02em
+      color: $grey
+      margin: 0 0 30px 0
+    &-link
+      font-family: $font-suisse-semb
+      display: inline-block
+      letter-spacing: 0.08em
+      text-transform: uppercase
+      font-size: 20px
+      line-height: 26px
+      color: $blue
+      padding: 18px 44px 16px
+      background: $green
+      border-radius: 4px
+      transition: background-color .3s ease
+      &:hover
+        background: $btn-green-hover-bg
+
+.rules
+  color: $grey
+  padding: 0 0 100px 0
+  &__details[open] .rules__summary::before
+    transform: translateY(-50%) rotate(0deg)
+
+  &__summary
+    position: relative
+    font-family: $font-suisse-semb
+    font-size: 22px
+    line-height: 40px
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    padding: 22px 65px 20px 35px
+    cursor: pointer
+    list-style: none
+    border-radius: 4px
+    color: $grey
+    &::before
+      content: ''
+      position: absolute
+      width: 20px
+      height: 10px
+      top: 50%
+      right: 34px
+      transform: translateY(-50%) rotate(180deg)
+      background: url("../img/arrow.svg") no-repeat 0 0/contain
+  &__text
+    padding: 30px 35px
+    border-radius: 4px
+    margin-top: 3px
+  &__item
+    &-title
+      font-family: $font-suisse-reg
+      color: $grey
+      font-size: 16px
+      line-height: 28px
+      letter-spacing: 0.02em
+      margin: 0 0 25px 0
+    &-list
+      >li
+        margin: 0 0 25px 0
+      li
+        font-family: $font-suisse-reg
+        color: $grey
+        font-size: 16px
+        line-height: 28px
+        letter-spacing: 0.02em
+        ul
+          margin-top: 25px
+          li
+            font-family: $font-suisse-reg
+            margin: 0 0 25px 0
+            p
+              font-family: $font-suisse-reg
+            ul
+              margin-top: 25px
+              li
+                font-family: $font-suisse-reg
+                margin: 25px 0 25px 0
+
+
+
+
+
+
+
+
+
+
+
