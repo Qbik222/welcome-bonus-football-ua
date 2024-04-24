@@ -62,6 +62,26 @@ body.dark
       background: #292B35
 
 body
+  &.en
+    .banner
+      &__info
+        &-center
+          @media screen and (max-width: 870px)
+            padding-right: 16px
+          span
+            font-size: 12px
+            @media screen and (max-width: 1024px)
+              font-size: 11px
+            @media screen and (max-width: 600px)
+              font-size: 7px
+        &-center, &-bottom
+          @media screen and (max-width: 870px) and (min-width: 601px)
+            font-size: 29px
+          @media screen and (max-width: 365px)
+            font-size: 7vw
+        &-link
+          padding: 18px 34px 16px
+
   &.light
     .banner
       background: $blue
