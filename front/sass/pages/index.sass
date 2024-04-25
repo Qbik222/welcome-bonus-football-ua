@@ -1,9 +1,12 @@
 $blue: #000055
+$dark-blue: #00003D
 $magenta: #ff267e
 $green: #05C489
 $grey: #ededed
+$dark-grey: #292B35
 $white: #ffffff
 $btn-green-hover-bg: #37d0a1
+$black:  #191A23
 
 $font-suisse-reg: 'SuisseIntl-Regular', sans-serif // 400 //
 $font-suisse-med: 'SuisseIntl-Medium', sans-serif // 500 //
@@ -40,26 +43,26 @@ body.light
     background: $blue
   .info
     &__item
-      background: #00003D
+      background: $dark-blue
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
   .rules
     &__summary
-      background: #00003D
+      background: $dark-blue
     &__text
-      background: #00003D
+      background: $dark-blue
 
 body.dark
   .wrapper
-    background: #191A23
+    background: $black
   .info
     &__item
-      background: #292B35
+      background: $dark-grey
       box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
   .rules
     &__summary
-      background: #292B35
+      background: $dark-grey
     &__text
-      background: #292B35
+      background: $dark-grey
 
 body
   &.en
