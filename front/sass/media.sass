@@ -14,7 +14,7 @@
 
 @media screen and (max-width: 1110px)
   .banner
-    padding: 67px 0 20px 0
+    padding: 155px 0 20px 0
     &__container
       padding: 0 25px 0 60px
       &::before
@@ -45,9 +45,14 @@
           opacity: 0
 
 @media screen and (max-width: 1024px)
+  .info
+    &__list
+      grid-template-columns: calc(50% - 8px) calc(50% - 8px)
+      gap: 16px
   .videos
     &__container
       padding: 0
+
 
 @media screen and (max-width: 975px)
   .banner
@@ -152,6 +157,8 @@
         width: 50%
         max-width: 170px
         max-height: 38px
+      &-bottom
+        padding: 7px 24px 5px
 
       &-center
         padding: 7px 17px 5px 10px
@@ -166,7 +173,13 @@
       min-height: 420px
       margin: -110px 0 0 0px
     &__control
-      display: none
+      &-left
+        left: 0
+      &-right
+        right: 0
+      &-left, &-right
+        width: 40px
+        height: 40px
     &__item
       height: 151px
       max-height: 151px
@@ -174,9 +187,10 @@
       margin: 0 -135px
       min-width: 268px
       max-width: 268px
+      border: 2px solid $slide-border
     .videoPlayBtn
-      width: 36px
-      height: 36px
+      width: 30px
+      height: 30px
     &__title
       font-size: 32px
       text-align: left
