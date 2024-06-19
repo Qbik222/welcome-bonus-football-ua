@@ -71,14 +71,6 @@ body.light
         line-height: 16px
       @media screen and (max-width: 320px)
         font-size: 10px
-    &__text
-      background: $dark-blue2
-      &::-webkit-scrollbar
-        background-color: rgba(0, 0, 0, 0.20)
-        width: 3px
-      &::-webkit-scrollbar-thumb
-        background-color: $green
-        width: 3px
 body.dark
   background: $black
   .wrapper
@@ -124,8 +116,6 @@ body
         background-position: 50% 0
       @media screen and (max-width: 1220px)
         background-position: 0 0
-      @media screen and (max-width: 1150px)
-        background-position: -20% 0
       @media screen and (max-width: 1100px)
         background: url("../img/pers-tab.jpg") no-repeat 100% 0/cover
       @media screen and (max-width: 950px)
@@ -451,6 +441,14 @@ body
   padding: 0 0 100px 0
   &__details[open] .rules__summary::before
     transform: translateY(-50%) rotate(0deg)
+  &__text
+      background: $dark-blue2
+      &::-webkit-scrollbar
+        background-color: rgba(0, 0, 0, 0.20)
+        width: 3px
+      &::-webkit-scrollbar-thumb
+        background-color: $green
+        width: 3px
   &__summary
     position: relative
     font-family: $font-suisse-semb
@@ -523,9 +521,9 @@ body
   border: 0
   //pointer-events: initial
   z-index: 0
-  position: absolute
-  top: 0
-  left: 0
+  //position: absolute
+  //top: 0
+  //left: 0
   display: none
 
 .videoPlayBtn

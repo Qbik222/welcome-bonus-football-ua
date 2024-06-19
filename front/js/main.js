@@ -102,10 +102,11 @@ sliderItems.forEach((item, i) =>{
     const videoPlayBtn = item.querySelector(".videoPlayBtn")
     const parentElement = videoIframe.parentElement
     videoPlayBtn.addEventListener("click", () =>{
-        videoIframe.src = videoIframe.src + '&autoplay=1';
+        videoIframe.src = videoIframe.src + '&autoplay=1&start=1&fs=0';
         videoIframe.style.display = "block"
         videoPlayBtn.style.display = "none"
         parentElement.style.border = "none"
+
 
     })
 })
