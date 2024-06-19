@@ -82,8 +82,14 @@ body.dark
   .rules
     &__summary
       background: $dark-grey
+      @media screen and (max-width: 600px)
+        font-size: 11px
+        line-height: 16px
+      @media screen and (max-width: 320px)
+        font-size: 10px
     &__text
       background: $dark-grey
+
 
 body
   &.en

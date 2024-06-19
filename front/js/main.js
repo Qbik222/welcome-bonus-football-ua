@@ -84,6 +84,7 @@ function setupForecastSlider(sliderSelector, itemSelector, buttonLeftSelector, b
     carousel.addEventListener('mousedown', handleDragStart);
     carousel.addEventListener('touchstart', handleDragStart);
 
+
     document.addEventListener('mousemove', handleDragMove);
     document.addEventListener('touchmove', handleDragMove);
 
@@ -102,11 +103,10 @@ sliderItems.forEach((item, i) =>{
     const videoPlayBtn = item.querySelector(".videoPlayBtn")
     const parentElement = videoIframe.parentElement
     videoPlayBtn.addEventListener("click", () =>{
-        videoIframe.src = videoIframe.src + '&autoplay=1&start=1&fs=0&mute=1';
+        videoIframe.src = videoIframe.src + '&autoplay=1&start=1&fs=0&mute=1&controls=1';
         videoIframe.style.display = "block"
         videoPlayBtn.style.display = "none"
         parentElement.style.border = "none"
-
 
     })
 })
